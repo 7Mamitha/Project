@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mamitha Amini M - Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    .navbar { box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+
+    #home {
+      height: 100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(135deg,#dbeafe,#fce7f3,#e0f2fe);
+      background-size:300% 300%;
+      animation: bgmove 12s infinite;
+      padding-top:56px;
+    }
+    @keyframes bgmove {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+    }
+    #home h1{ font-weight:700; font-size:2.5rem; }
+    #home p{ font-size:1.2rem; color:#333; }
+
+    #about {
+      background: linear-gradient(120deg, #f9fafb, #f1f5f9, #f9fafb);
+      background-size: 200% 200%;
+      animation: aboutfade 15s infinite alternate;
+    }
+    @keyframes aboutfade {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
+    }
+
+    .card {
+      border-radius: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    #skills {
+      background: linear-gradient(225deg, #e5d0fb 0%, whitesmoke 50%, rgb(235, 212, 217) 100%);
+    }
+    .skill-btn {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .skill-btn img { width: 45px; height: 45px; }
+    .skill-btn:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.2); transform: scale(1.1); }
+
+    .game-btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 25px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      background-color: black;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .game-btn:hover { background-color: darkred; transform: scale(1.05); }
+
+    footer { text-align: center; margin-top: 50px; padding: 20px 0 10px 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navCollapse" class="collapse navbar-collapse justify-content-end">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contacts</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <section id="home">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+          <h1>Hi 👋, I'm Mamitha Amini M</h1>
+          <p class="lead">Passionate Student · Aspiring Developer</p>
+          <a href="#about" class="btn btn-dark mt-3">Explore More</a>
+        </div>
+        <div class="col-md-5 text-center">
+          <img src="D:\new portfolio\Assest\photo.jpeg" alt="Profile Photo" class="rounded-circle shadow-sm" style="width: 300px; height: 300px; object-fit: cover;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-md-7 text-center text-md-start mb-4 mb-md-0">
+          <h2 class="mb-4">
+            <i class="bi bi-person-circle me-2" style="font-size:1rem;"></i> About Me
+          </h2>
+          <p>✓ I am a passionate student</p>
+          <p>✓ Currently pursuing my MSc. Computer Science</p>
+          <p>✓ I am focused on developing practical skills</p>
+          <p>✓ I believe I am always looking for a way in developing my soft skill and tech skill in a curious mindset</p>
+        </div>
+        <div class="col-md-5 text-center">
+          <video width="100%" controls>
+            <source src="videos/demo-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="education" class="py-5 bg-light rounded-3">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="bi bi-book me-2" style="font-size:1rem;"></i> Education</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 text-center p-4">
+            <i class="bi bi-book-half text-success fs-1 mb-3"></i>
+            <h5 class="card-title fw-bold">
+              <a href="https://www.gsms.ac.in/" target="_blank" class="text-decoration-none text-dark">Higher Secondary Education</a>
+            </h5>
+            <p class="card-text text-muted">Good Shepherd Model School | 2020 – 2021</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 text-center p-4">
+            <i class="bi bi-laptop text-info fs-1 mb-3"></i>
+            <h5 class="card-title fw-bold">
+              <a href="https://stjosephcollegetup.edu.in/" target="_blank" class="text-decoration-none text-dark">B.Sc. Computer Science</a>
+            </h5>
+            <p class="card-text text-muted">St. Joseph’s College for Women | 2022 – 2025</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow-sm h-100 text-center p-4">
+            <i class="bi bi-mortarboard-fill text-primary fs-1 mb-3"></i>
+            <h5 class="card-title fw-bold">
+              <a href="https://rvscas.ac.in/" target="_blank" class="text-decoration-none text-dark">M.Sc. Computer Science</a>
+            </h5>
+            <p class="card-text text-muted">RVS College of Arts and Science | 2025 – 2027</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="certificates" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="bi bi-award me-2" style="font-size:1rem;"></i> Certificates</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100 text-center p-4">
+            <i class="bi bi-award-fill text-warning fs-1 mb-3"></i>
+            <h5 class="card-title fw-bold">C Programming Basics</h5>
+            <p class="card-text text-muted">Issued on 28th August 2025</p>
+            <a href="C:\Backup\Downloads\des\Mamitha Amini M C Certificate.pdf" target="_blank" class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-box-arrow-up-right"></i> View Certificate
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow-sm h-100 text-center p-4">
+            <i class="bi bi-patch-check-fill text-success fs-1 mb-3"></i>
+            <h5 class="card-title fw-bold">JavaScript for Beginners</h5>
+            <p class="card-text text-muted">Issued on 31st August 2025</p>
+            <a href="C:\Backup\Downloads\des\Mamitha Amini M Js Certificate.pdf" target="_blank" class="btn btn-outline-primary d-flex align-items-center justify-content-center gap-2">
+              <i class="bi bi-box-arrow-up-right"></i> View Certificate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="skills" class="py-5">
+    <div class="container text-center">
+      <h2 class="mb-5"><i class="bi bi-lightning-charge me-2" style="font-size:1rem;"></i> Technical Skills</h2>
+      <div class="skills-container d-flex justify-content-center flex-wrap gap-4">
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" /></div>
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" /></div>
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" /></div>
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" /></div>
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" alt="Bootstrap" /></div>
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++" /></div>
+        <div class="skill-btn"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL" /></div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="projects" class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5"><i class="bi bi-kanban me-2" style="font-size:1rem;"></i> Projects</h2>
+
+      <div class="card p-3 mb-4 shadow-sm">
+        <h4 class="card-title">Driver Drowsiness Detection</h4>
+        <p class="card-text">A Deep Learning-based system to detect fatigue and prevent accidents.</p>
+        <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#driverDetails">View Details</button>
+        <div id="driverDetails" class="collapse mt-3">
+          <p>Driver drowsiness detection is a safety technology designed to prevent accidents caused by fatigue...</p>
+          <img src="images/driver.jpeg" alt="Driver Project" class="img-fluid rounded mb-3" />
+          <div class="text-center">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Ta7I0OB_RWU" title="Driver Drowsiness Demo" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="card p-3 shadow-sm">
+        <h4 class="card-title">Demos</h4>
+        <p class="card-text">Mini projects implemented for practice.</p>
+        <button class="btn btn-dark" data-bs-toggle="collapse" data-bs-target="#demoDetails">View Demos</button>
+        <div id="demoDetails" class="collapse mt-3 text-center">
+          <a class="game-btn" href="D:\Java Script\js\Week 3\pacman.html" target="_blank">▶ Play PacMan</a>
+          <a class="game-btn" href="D:\Java Script\js\Week 1& 2\ball2.html" target="_blank">▶ Play Random Ball</a>
+          <a class="game-btn" href="D:\Java Script\js\Week 6\pacman2.html" target="_blank">▶ Play PacMen Game</a>
+          <a class="game-btn" href="D:\Java Script\js\Week 7\assignment7.1.html" target="_blank">▶ Play Eye Movement</a>
+          <a class="game-btn" href="location pls" target="_blank">▶ Play Tower Of Honor</a>
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="py-5" style="background: linear-gradient(135deg, #d1e5fa, whitesmoke); min-height: 100vh; display:flex; flex-direction:column; align-items:center;">
+    <div class="container" style="margin-top:30px; background:white; padding:40px 30px; border-radius:12px; box-shadow:0 4px 15px rgba(0,0,0,0.1); max-width:800px; width:100%;">
+      <h2 class="text-center mb-5"><i class="bi bi-envelope-at me-2 text-info" style="font-size:1rem;"></i> Contact</h2>
+      <p style="font-size:1.1rem; color:#444;">Let’s get in touch and talk about your next project.</p>
+      <form>
+        <input type="text" placeholder="Name" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;"><br>
+        <input type="email" placeholder="E-mail" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;"><br>
+        <input type="text" placeholder="Subject" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;"><br>
+        <textarea placeholder="Message" rows="5" style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ccc; border-radius:6px;"></textarea><br>
+        <button type="submit" style="background: rgb(225, 196, 237); color: black; font-weight: bold; border: none; cursor: pointer; width:100%; padding:12px; border-radius:6px; transition: background 0.3s ease, transform 0.2s;">
+          <a href="skilltest.html" style="text-decoration:none; color:black;">SEND MESSAGE</a>
+        </button>
+      </form>
+    </div>
+
+    <footer>
+      <div style="margin-bottom:5px;">
+        <a href="https://github.com/YourGitHubUsername" target="_blank"><i class="bi bi-github" style="font-size:2rem; color:black;"></i></a>
+        <a href="https://www.linkedin.com/in/YourLinkedInUsername" target="_blank"><i class="bi bi-linkedin" style="font-size:2rem; color:black;"></i></a>
+        <span style="margin-left:10px;">Connect with me</span>
+      </div>
+      <p style="margin:0; font-size:0.9rem;">&copy; 2025 Mamitha Amini M. All Rights Reserved.</p>
+    </footer>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
